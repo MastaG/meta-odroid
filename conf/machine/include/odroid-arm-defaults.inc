@@ -35,7 +35,7 @@ UBOOT_XTRA_CMDLINE ?=  "${@bb.utils.contains('DISTRO_FEATURES', 'TS_vu7+', 'usbh
 
 IMAGE_BOOT_FILES ?= "${UBOOT_SCRIPT}"
 
-MACHINE_FEATURES_append = " mali"
+# MACHINE_FEATURES_append = " mali"
 
 MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
 
