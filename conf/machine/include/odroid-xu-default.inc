@@ -3,7 +3,7 @@
 include conf/machine/include/samsung-exynos.inc
 include conf/machine/include/odroid-default-settings.inc
 
-DEFAULTTUNE = "cortexa15hf-neon"
+DEFAULTTUNE = "cortexa15thf-neon-vfpv4"
 include conf/machine/include/tune-cortexa15.inc
 
 EXTRA_IMAGEDEPENDS += "secure-odroid"
