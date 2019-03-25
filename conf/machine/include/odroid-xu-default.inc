@@ -3,7 +3,7 @@
 require conf/machine/include/samsung-exynos.inc
 require conf/machine/include/odroid-arm-defaults.inc
 
-DEFAULTTUNE = "cortexa15thf-neon-vfpv4"
+DEFAULTTUNE = "cortexa15hf-neon-vfpv4"
 include conf/machine/include/tune-cortexa15.inc
 
 UBOOT_FDT_LOADADDR = "0x40800000"
