@@ -9,7 +9,7 @@ KERNEL_IMAGETYPE ?= "zImage"
 
 PREFERRED_PROVIDER_virtual/bootloader ?= "u-boot"
 PREFERRED_PROVIDER_u-boot ?= "u-boot"
-PREFERRED_VERSION_u-boot ?= "2019.04"
+PREFERRED_VERSION_u-boot ?= "2020.01%"
 
 USE_BOOTSRC ?= "1"
 UBOOT_ENV  ?= "boot"
@@ -35,12 +35,10 @@ UBOOT_XTRA_CMDLINE ?=  "${@bb.utils.contains('DISTRO_FEATURES', 'TS_vu7+', 'usbh
 
 IMAGE_BOOT_FILES ?= "${UBOOT_SCRIPT}"
 
-# MACHINE_FEATURES_append = " mali"
-
 MACHINE_FEATURES_BACKFILL_CONSIDERED = "rtc"
 
 EXTRA_IMAGEDEPENDS_append = " u-boot secure-odroid"
 EXTRA_IMAGEDEPENDS_append = " ${@bb.utils.contains("DISTRO_FEATURES", "x11", " odroid-edid", " ", d)}"
 IMAGE_INSTALL_append = " kernel-devicetree"
 
-IMAGE_CLASSES += "image_types_nfs image_types_odroid netboot"
+IMAGE_CLASSES += "image_types_odroid"

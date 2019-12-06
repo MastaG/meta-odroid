@@ -1,8 +1,0 @@
-FILESEXTRAPATHS_prepend := "${THISDIR}/${PN}-${PV}:"
-
-LINUX_VERSION ?= "5.0.6"
-SRCREV ?= "820c1fa515010d280551075da59fc2668ba8b3ae"
-SRCREV_meta ?= "172634f02e7e293bb53c6c7b1473306b9b30058d"
-
-require linux-stable.inc
-LIC_FILES_CHKSUM = "file://COPYING;md5=bbea815ee2795b2f4230826c0c6b8814"

@@ -1,0 +1,22 @@
+header:
+  version: 1
+
+machine: odroid-xu3-lite
+distro: poky
+target: core-image-minimal
+
+repos:
+  meta-odroid:
+
+  poky:
+    url: https://git.yoctoproject.org/git/poky
+    refspec: master
+    layers:
+      meta:
+      meta-poky:
+
+local_conf_header:
+  meta-odroid: |
+    INHERIT += "rm_work_and_downloads"
+    SOURCE_MIRROR_URL = "http://downloads.yoctoproject.org/mirror/sources/"
+    SSTATE_MIRRORS = "file://.* http://sstate.yoctoproject.org/PATH"
